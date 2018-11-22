@@ -1,0 +1,53 @@
+<!ELEMENT scene (figures*, rules* )>
+    <!ATTLIST scene name CDATA #REQUIRED >
+<!ELEMENT figures (rectangle*, triangle*, carree*, cercle*, polygone*)>
+  <!ELEMENT rectangle ( point, width, heigth)>
+  <!ATTLIST rectangle
+            id ID #REQUIRED
+            color CDATA #IMPLIED
+            order CDATA #IMPLIED
+            transparency (true|false) "true"  >
+  <!ELEMENT point EMPTY>
+    <!ATTLIST point x CDATA #REQUIRED
+                    y CDATA #REQUIRED >
+  <!ELEMENT width EMPTY>
+    <!ATTLIST width value CDATA #REQUIRED >
+  <!ELEMENT heigth EMPTY>
+    <!ATTLIST heigth value CDATA #REQUIRED >
+
+  <!ELEMENT triangle (point+)>
+  <!ATTLIST triangle
+            id ID #REQUIRED
+            color CDATA #IMPLIED
+            order CDATA #IMPLIED
+            transparency (true|false) "true"  >
+  <!ELEMENT carree ( point, width )>
+  <!ATTLIST carree
+            id ID #REQUIRED
+            color CDATA #IMPLIED
+            order CDATA #IMPLIED
+            transparency (true|false) "true"  >
+  <!ELEMENT cercle (point, radius )>
+  <!ATTLIST cercle
+            id ID #REQUIRED
+            color CDATA #IMPLIED
+            order CDATA #IMPLIED
+            transparency (true|false) "true"  >
+    <!ELEMENT radius EMPTY>
+      <!ATTLIST radius value CDATA #REQUIRED>
+
+  <!ELEMENT polygone (point+)>
+  <!ATTLIST polygone
+            id ID #REQUIRED
+            color CDATA #IMPLIED
+            order CDATA #IMPLIED
+            transparency (true|false) "true"  >
+
+
+<!ELEMENT rules (rule*)>
+  <!ELEMENT rule (element+, type, description)>
+    <!ELEMENT element EMPTY>
+      <!ATTLIST element
+                figure IDREF #REQUIRED>
+    <!ELEMENT type (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>

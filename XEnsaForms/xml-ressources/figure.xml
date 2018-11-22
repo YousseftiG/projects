@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scene SYSTEM "/Users/mac/Desktop/Dev_Env/workspace/XEnsaForms/xml-ressources/figures_schema.dtd">
+<scene name="figure.xml">
+  <figures>
+    <rectangle id="rectangle-1" order="2" color="blue" transparency="true" >
+      <point x="1" y="2" />
+      <width value="3" />
+      <heigth value="2" />
+    </rectangle>
+
+    <triangle id="triangle-1" order="1" color="blue" transparency="true" >
+      <point x="3" y="6" />
+      <point x="3" y="0" />
+      <point x="0" y="0" />
+    </triangle>
+
+    <carree id="carree-1" order="3" color="blue" transparency="true" >
+      <point x="4" y="7" />
+      <width value="3" />
+    </carree>
+
+    <cercle id="cercle-1" order="4" color="blue" transparency="true" >
+      <point x="1" y="2" />
+      <radius value="4" />
+    </cercle>
+
+    <polygone id="polygone-1" order="5" color="blue" transparency="true" >
+      <point x="4" y="6" />
+      <point x="1" y="0" />
+      <point x="3" y="3" />
+    </polygone>
+
+  </figures>
+
+  <rules>
+    <rule>
+      <element figure="cercle-1" />
+      <element figure="rectangle-1" />
+      <type>surposed</type>
+      <description>Intersting</description>
+    </rule>
+  </rules>
+
+</scene>
+
